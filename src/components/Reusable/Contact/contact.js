@@ -31,8 +31,8 @@ export default function contact() {
             />
             <textarea
               type="text"
-              name="description"
-              id="description"
+              name="message"
+              id="message"
               placeholder="Your Message"
               className="form-control my-3"
             />
