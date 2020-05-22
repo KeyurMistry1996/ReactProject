@@ -2,19 +2,70 @@ import React, { Component } from "react"
 import Img from "gatsby-image"
 import Heading from "../Heading"
 
+const getCaty = items => {
+  let holditem = items.map(items => {
+    return items.node.category
+  })
+  let holdCategory = new Set(holditem)
+  let categorys = Array.from(holdCategory)
+  categorys = ["all", ...categorys]
+  return categorys
+}
+
 export default class Coursecart extends Component {
   constructor(props) {
     super(props)
     this.state = {
       courses: props.courses.edges,
       mycourses: props.courses.edges,
+      mycategory: getCaty(props.courses.edges),
     }
   }
+
+  catyClicked = category => {
+    let kettitall = [...this.state.courses]
+
+    if (category === "all") {
+      this.setState(() => {
+        return {
+          mycourses: kettitall,
+        }
+      })
+    } else {
+      let holdme = kettitall.filter(({ node }) => {
+        return node.category === category
+      })
+      this.setState(() => {
+        return {
+          mycourses: holdme,
+        }
+      })
+    }
+  }
+
   render() {
     return (
       <section className="py-5">
         <div className="container">
           <Heading title="Courses" />
+          <div className="row my-3">
+            <div className="col-10 mx-auto text-center">
+              {this.state.mycategory.map((category, index) => {
+                return (
+                  <button
+                    type="button"
+                    className="btn btn-info m-3 px-3"
+                    key={index}
+                    onClick={() => {
+                      this.catyClicked(category)
+                    }}
+                  >
+                    {category}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
           <div className="row ">
             {this.state.mycourses.map(({ node }) => {
               return (
