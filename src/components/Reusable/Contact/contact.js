@@ -12,6 +12,7 @@ export default function contact() {
               type="text"
               name="name"
               id="name"
+              required
               placeholder="Your Name"
               className="form-control my-3"
             />
@@ -19,6 +20,7 @@ export default function contact() {
               type="email"
               name="email"
               id="email"
+              required
               placeholder="Your Email"
               className="form-control my-3"
             />
@@ -26,6 +28,7 @@ export default function contact() {
               type="text"
               name="mobile"
               id="mobile"
+              required
               placeholder="Your Mobile"
               className="form-control my-3"
             />
@@ -33,6 +36,7 @@ export default function contact() {
               type="text"
               name="message"
               id="message"
+              required
               placeholder="Your Message"
               className="form-control my-3"
             />
