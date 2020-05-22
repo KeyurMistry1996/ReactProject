@@ -1,0 +1,37 @@
+.bg-theme {
+  background-color: #1287a5;
+}
+
+.cart-icon {
+  font-size: 2rem;
+}
+
+.hero-background {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show .nav-item:hover {
+  text-decoration: underline;
+}
+
+.about-background {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  height: 83vh;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  height: 50vh;
+}
