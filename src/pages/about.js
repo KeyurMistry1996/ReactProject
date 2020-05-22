@@ -11,7 +11,7 @@ import Teamsection from "../components/Reusable/About/Teamsection"
 const AboutPage = ({ data }) => (
   <div>
     <Layout>
-      <SEO title="Home"></SEO>
+      <SEO title="About"></SEO>
       <HeroSection
         img={data.img.childImageSharp.fluid}
         title="About LearnCodeOnline"

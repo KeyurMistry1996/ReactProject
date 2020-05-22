@@ -5,32 +5,27 @@ import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
 import InfoBlock from "../components/Reusable/InfoBlock"
 import { graphql } from "gatsby"
-import DualInfo from "../components/Reusable/DualInfo"
-import Teamsection from "../components/Reusable/About/Teamsection"
+import Contact from "../components/Reusable/Contact/contact"
 
-const AboutPage = ({ data }) => (
+const ContactPage = ({ data }) => (
   <div>
     <Layout>
-      <SEO title="Home"></SEO>
+      <SEO title="Contact"></SEO>
       <HeroSection
         img={data.img.childImageSharp.fluid}
-        title="About LearnCodeOnline"
+        title="Contact Us"
         subtitle=""
         heroclass="about-background"
       ></HeroSection>
-      <DualInfo
-        heading="Our Team"
-        src="https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-      ></DualInfo>
-      <InfoBlock heading="Our Vision"></InfoBlock>
-      <Teamsection></Teamsection>
+      <InfoBlock heading="How can we help?"></InfoBlock>
+      <Contact />
     </Layout>
   </div>
 )
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "about.png" }) {
+    img: file(relativePath: { eq: "contact.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -40,4 +35,4 @@ export const query = graphql`
   }
 `
 
-export default AboutPage
+export default ContactPage

@@ -11,7 +11,7 @@ import Service from "../components/Reusable/Services"
 const IndexPage = ({ data }) => (
   <div>
     <Layout>
-      <SEO title="Home"></SEO>
+      <SEO title="Service"></SEO>
       <HeroSection
         img={data.img.childImageSharp.fluid}
         title="Our services"
