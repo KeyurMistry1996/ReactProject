@@ -3,7 +3,7 @@ import React from "react"
 export default function Teamsection() {
   return (
     <div className="row">
-      <div className="col-10 col-sm-10 mx-auto">
+      <div className="col-10 col-sm-10 col-md-10 mx-auto">
         <div class="card-group">
           <div class="card">
             <img
